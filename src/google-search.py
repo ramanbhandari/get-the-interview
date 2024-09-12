@@ -6,9 +6,11 @@ load_dotenv()
 
 API_KEY = os.getenv('API_KEY')
 ENGINE_ID = os.getenv('ENGINE_ID')
+SEARCH_URL_1 = os.getenv('SEARCH_URL_1')
+SEARCH_QUERY_1 = os.getenv('SEARCH_QUERY_1')
 
 def custom_search(query, num_results=10, start=1):
-    url = "https://www.googleapis.com/customsearch/v1"
+    url = os.getenv(SEARCH_URL_1)
     params = {
         'q': query,
         'key': API_KEY,
@@ -26,8 +28,7 @@ def custom_search(query, num_results=10, start=1):
         print(f"Error: {response.status_code}")
         return None
 
-query = 'resume software engineer google'
-results = custom_search(query)
+results = custom_search(os.getenv(SEARCH_QUERY_1))
 
 if results:
     for item in results.get('items', []):
