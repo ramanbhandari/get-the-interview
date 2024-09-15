@@ -57,3 +57,14 @@ Machine Learning Model
 ### Phase 5
 
 Web Interface
+
+## Planning
+
+ML Models that can be used -
+- Traditional ML Models (Logistic Regression, Random Forest, XGBoost)
+  Libraries: Scikit-learn, XGBoost
+
+Deep Learning Model (BERT) -
+
+- Libraries: Hugging Face Transformers
+  TensorFlow or PyTorch
